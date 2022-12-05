@@ -1,0 +1,15 @@
+:root {
+    /* header */
+    --fc-header: #8E9AAF;
+    --fc-header-padding: #CBC0D3;
+    --fc-ff-header: #FFFFFF;
+
+    --ff-header: 'Staatliches', sans-serif;
+
+    /* aside */
+    --fc-aside: #EFF1FF;
+    --fc-ff-aside: #23053A;
+    --fc-aside-bottom: #FEEAFA;
+
+    --ff-aside: 'Palanquin', sans-serif;
+}
