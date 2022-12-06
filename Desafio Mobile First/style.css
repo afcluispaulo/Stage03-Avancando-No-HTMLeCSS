@@ -1,15 +1,47 @@
 :root {
     /* header */
-    --fc-header: #8E9AAF;
+    --fc-bg-header: #8E9AAF;
     --fc-header-padding: #CBC0D3;
     --fc-ff-header: #FFFFFF;
 
     --ff-header: 'Staatliches', sans-serif;
 
     /* aside */
-    --fc-aside: #EFF1FF;
+    --fc-bg-aside: #EFF1FF;
     --fc-ff-aside: #23053A;
-    --fc-aside-bottom: #FEEAFA;
+
+    --fc-bg-button: #FEEAFA;
 
     --ff-aside: 'Palanquin', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 384px;
+    height: 279px;
+
+    background-color: var(--fc-bg-header);
+    
+}
+
+div aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 384px;
+    height: 279px;
+
+    background-color: var(--fc-bg-aside);    
 }
