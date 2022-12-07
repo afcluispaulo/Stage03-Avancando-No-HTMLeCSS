@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     /* header */
     --fc-bg-header: #8E9AAF;
@@ -6,6 +12,9 @@
 
     --ff-header: 'Staatliches', sans-serif;
 
+    /* page */
+    --page-width: 384px;
+
     /* aside */
     --fc-bg-aside: #EFF1FF;
     --fc-ff-aside: #23053A;
@@ -13,14 +22,22 @@
     --fc-bg-button: #FEEAFA;
 
     --ff-aside: 'Palanquin', sans-serif;
-}
 
-body {
+    }
+
+
+.page {
     display: flex;
     flex-direction: column;
     align-items: center;
     
+    
+    width: var(--page-width);
+    
+    background-color: var(--fc-bg-aside);    
 }
+
+
 
 
 header {
@@ -28,20 +45,21 @@ header {
     flex-direction: column;
     align-items: center;
 
-    width: 384px;
-    height: 279px;
+    width: 100%;
 
     background-color: var(--fc-bg-header);
     
 }
 
-div aside {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 384px;
-    height: 279px;
-
-    background-color: var(--fc-bg-aside);    
+header h1 {
+    
+    width: 100%;
+    background-color: var(--fc-header-padding);
 }
+
+
+
+body aside  {
+    padding: 0 32px 60px;
+}
+
