@@ -90,8 +90,7 @@ header h1 {
     font-size: 40px;
     line-height: 34px;
     letter-spacing: 5%;
-    margin-top: 8px;
-    margin-bottom: 7px;
+    
 
     color: var(--fc-ff-header);
 }
@@ -147,3 +146,33 @@ body p {
     color: var(--fc-button-aside);
 
 }
+
+header {
+    animation: topdown 700ms;
+}
+
+aside {
+    animation: downtop 700ms 300ms reverse backwards;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes downtop {
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+
