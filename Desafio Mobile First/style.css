@@ -47,7 +47,6 @@
 
 }
 
-
 .page {
     display: flex;
     flex-direction: column;
@@ -151,15 +150,13 @@ header {
     animation: topdown 700ms;
 }
 
-aside {
-    animation: downtop 700ms 300ms reverse backwards;
-}
-
 header h1 {
     animation: side 700ms 500ms reverse backwards;
 }
 
-
+aside {
+    animation: downtop 700ms 300ms reverse backwards;
+}
 
 @keyframes topdown {
     0% {
