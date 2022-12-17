@@ -55,7 +55,7 @@
     align-items: center;
     
     
-    width: var(--page-width);
+    
     
     background-color: var(--fc-bg-aside);    
 }
@@ -121,13 +121,15 @@ body p {
     Line-height: 15px;
 }
 .card {
-    position: relative;
+    
     
     
 }
 
 .card img {
+    position: relative;
     margin-bottom: var(--gap-img);
+    object-fit: cover;
     
 
 }
@@ -146,11 +148,11 @@ body p {
     background-color: var(--fc-bg-button);
     
     border-radius: var(--br-button);
-    position: absolute;
+    
 }
 
 .card h2 span{
-    position: absolute;
+ 
     top: var(--top-right-button);
     right: var(--top-right-button);
 
@@ -164,9 +166,10 @@ body p {
 
 }
 
-footer {
+.main-page {
     display: none;
 }
+
 
 header {
     animation: topdown 700ms;
@@ -215,21 +218,17 @@ main {
 
 @media (min-width: 720px) {
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+   
     
     header {
         
         grid-area: h;
-        width: 377px;
         height: 100%;
         display: flex;
         flex-direction: column;
         background: #8E9AAF;
         position: relative;
+
     }
 
     .mobile {
@@ -254,7 +253,7 @@ main {
     header p {
         opacity: 1;
         font-family: var(--ff-aside);
-        width: 275px;
+        
         height: 100%;
         left: 54px;
         top: 333px;
@@ -267,26 +266,22 @@ main {
     main { 
         grid-area: m;
         background: #FFFFFF;
-        width: 902px;
-        
+        display: flex;
+        flex-direction: column;
+       
      }
 
     .main-page{
         display: flex;
-        margin: 98px 64px;
-       gap: 32px;
+        justify-content: center;
+        margin: 64px 0;
+        gap: 36px;
         
     }
-
-    .main-page footer {
-        ;
-    }
-
     .card-desk { 
         display: flex;
         flex-direction: column;
-        gap: 32px;
-       
+        gap: 36px;
        
     }
    
@@ -295,20 +290,22 @@ main {
     }
 
     main p {
-        opacity: 0;
+        display: none;
     }
 
-  
+    footer {
+       grid-area: f;
+       background-color: aqua;
+    }
 
-    .page {
+    body {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 80vh 20vh;
+        grid-template-columns: 377px 902fr;
+        grid-template-rows: 80vh 10vh 10vh;
         grid-template-areas: "h m"
-        "h f";
-    }
+        "h m"
+        "h f"
+       }
 
-   
 
 }
-
