@@ -20,7 +20,6 @@
     --h-header-padding: 49px;
     --m-header-padding: 29px;
     --m-header-bottom: 29px;
-    
 
     /* aside */
     --fc-bg-aside: #EFF1FF;
@@ -47,8 +46,6 @@
 
 }
 
-
-
 .page {
     display: flex;
     flex-direction: column;
@@ -56,7 +53,6 @@
     background-color: var(--fc-bg-aside);   
     
 }
-
 
 header {
     display: flex;
@@ -80,8 +76,7 @@ header img {
 }
 
 
-header h1 {
-    
+header h1 {  
     width: 100%;
     height: var(--h-header-padding);
     
@@ -96,7 +91,6 @@ header h1 {
     line-height: 34px;
     letter-spacing: 5%;
     
-
     color: var(--fc-ff-header);
 }
 
@@ -105,8 +99,8 @@ header p {
 }
 
 body main  {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
     padding: 0 32px 60px;
 
@@ -121,20 +115,17 @@ body main p {
     Line-height: 15px;
 }
 
-body img {
-   
-}
-
 .card {
     position: relative;
 }
+
 .card img {
     width: 100%;
     object-fit: cover;
     position: relative;
 }
+
 .card span {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,7 +138,6 @@ body img {
     background-color: var(--fc-bg-button);
     
     border-radius: var(--br-button);
-    
 }
 
 .card h2 {
@@ -166,6 +156,10 @@ body img {
 }
 
 .main-page {
+    display: none;
+}
+
+footer {
     display: none;
 }
 
@@ -201,7 +195,6 @@ main {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 footer {
@@ -225,22 +218,17 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 @media (min-width: 720px) {
 
-   
-    
     header {
-        
         grid-area: h;
         height: 100%;
         display: flex;
         flex-direction: column;
         background: #8E9AAF;
         position: relative;
-
     }
 
     .mobile {
@@ -259,42 +247,45 @@ footer {
         font-size: 48px;
         line-height: 34px;
         color: #FFFFFF;
-
     }
 
     header p {
-        opacity: 1;
+        display: inherit;
+
         font-family: var(--ff-aside);
-        
-        height: 100%;
-        left: 54px;
-        top: 333px;
         font-size: 24px;
         line-height: 20px;
+
+        width: 275px;
+        height: 262px;
+        left: 54px;
+        top: 333px;
+
         color: #FFFFFF;
-        
+
+        text-align: center;
     }
 
     main { 
         grid-area: m;
         background: #FFFFFF;
+        
         display: flex;
         flex-direction: column;
-       
      }
 
     .main-page{
         display: flex;
         justify-content: center;
+        
         margin: 64px 0;
         gap: 36px;
-        
     }
+
     .card-desk { 
         display: flex;
         flex-direction: column;
-        gap: 36px;
-       
+        gap: 36px;   
     }
    
     .card {
@@ -307,18 +298,25 @@ footer {
 
     footer {
        grid-area: f;
-       background-color: aqua;
+       /*background-color: aqua;*/
        opacity: 1;
+       display: inherit;
+      
+    }
+
+    footer p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     body {
         display: grid;
         grid-template-columns: 377px 902fr;
-        grid-template-rows: 80vh 10vh 10vh;
+        grid-template-rows: 80vh 5vh 15vh;
         grid-template-areas: "h m"
-        "h m"
-        "h f"
+                             "h f"
+                             "h f";
     }
-
 
 }
