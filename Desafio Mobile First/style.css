@@ -5,8 +5,11 @@
 }
 
 :root {
+
+    font-size: 62.5%; /* 10px */
+
     /* page */
-    --page-width: 384px;
+    --page-width: 38.4rem;
 
     /* header */
     --fc-bg-header: #8E9AAF;
@@ -15,11 +18,11 @@
 
     --ff-header-button: 'Staatliches', sans-serif;
 
-    --m-img: 32px;
+    --m-img: 3.2rem;
 
-    --h-header-padding: 49px;
-    --m-header-padding: 29px;
-    --m-header-bottom: 29px;
+    --h-header-padding: 4.9rem;
+    --m-header-padding: 2.9rem;
+    --m-header-bottom: 2.9rem;
 
     /* aside */
     --fc-bg-aside: #EFF1FF;
@@ -27,22 +30,22 @@
 
     --ff-aside: 'Palanquin', sans-serif;
 
-    --m-p-top: 14px; 
-    --m-p-bottom: 63px;
-    --gap-img: 32px;
+    --m-p-top: 1.4rem; 
+    --m-p-bottom: 6.3rem;
+    --gap-img: 3.2rem;
     
     /* button */
 
     --fc-bg-button: #E5E5E5;
-    --w-button: 112px;
-    --h-button: 35px;
-    --p-button: 20px;
-    --br-button: 20px;
+    --w-button: 11.2rem;
+    --h-button: 3.5rem;
+    --p-button: 2.0rem;
+    --br-button: 2.0rem;
 
-    --fs-button: 20px;
-    --ln-button: 34px;
+    --fs-button: 2.0rem;
+    --ln-button: 3.4rem;
 
-    --top-right-button: 16px;
+    --top-right-button: 1.6rem;
 
 }
 
@@ -60,7 +63,7 @@ header {
     align-items: center;
 
     width: 100%;
-    height: 279px;
+    height: 27.9rem;
     background-color: var(--fc-bg-header);
     position: relative;
     
@@ -75,7 +78,6 @@ header img {
     position: absolute;
 }
 
-
 header h1 {  
     width: 100%;
     height: var(--h-header-padding);
@@ -87,8 +89,8 @@ header h1 {
     background-color: var(--fc-header-padding);
 
     font-family: var(--ff-header-button);
-    font-size: 40px;
-    line-height: 34px;
+    font-size: 4.0rem;
+    line-height: 3.4rem;
     letter-spacing: 5%;
     
     color: var(--fc-ff-header);
@@ -102,7 +104,7 @@ body main  {
     display: flex;
     flex-direction: column;
 
-    padding: 0 32px 60px;
+    padding: 0 3.2rem 6.0rem;
 
 }
 
@@ -111,8 +113,8 @@ body main p {
     text-align: center;
 
     font-family: var(--ff-aside);
-    Size: 20px;
-    Line-height: 15px;
+    Size: 2.0rem;
+    Line-height: 1.5rem;
 }
 
 .card {
@@ -123,6 +125,7 @@ body main p {
     width: 100%;
     object-fit: cover;
     position: relative;
+    margin-bottom: var(--m-img);
 }
 
 .card span {
@@ -143,11 +146,11 @@ body main p {
 .card h2 {
     position: absolute;
     z-index: 1;
-    top: 17px;
-    right: 39px;
+    top: 1.7rem;
+    right: 3.9rem;
     font-family: var(--ff-header-button);
-    font-size: 20px;
-    line-height: 34px;
+    font-size: 2.0rem;
+    line-height: 3.4rem;
     /* identical to box height, or 170% */
 
     letter-spacing: 0.05em;
@@ -161,28 +164,6 @@ body main p {
 
 footer {
     display: none;
-}
-
-.absolute {
-    position: absolute;
-}
-
-.relative {
-    position: relative;
-    z-index: -1;
-}
-
-
-header {
-    animation: topdown 700ms;
-}
-
-header h1 {
-    animation: side 700ms 500ms reverse backwards;
-}
-
-main {
-    animation: downtop 700ms 300ms reverse backwards;
 }
 
 @keyframes topdown {
@@ -220,11 +201,25 @@ footer {
     }
 }
 
+@media (max-width: 700px) {
+    header {
+        animation: topdown 700ms;
+    }
 
+    header h1 {
+        animation: side 700ms 500ms reverse backwards;
+    }
 
+    main {
+        animation: downtop 700ms 300ms reverse backwards;
+    }
+
+    .card h2 span {
+        animation: topdown 4s 300ms backwards;
+    }
+}
 
 @media (min-width: 720px) {
-
     header {
         grid-area: h;
         height: 100%;
@@ -250,8 +245,6 @@ footer {
       
     }
 
-
-
     header img:hover {
         transform: scale(1.1);
         transition-property: transform;
@@ -261,24 +254,24 @@ footer {
 
 
     header h1 {
-        margin: 50px 0 32px;
-        height: 70px;
-        font-size: 48px;
-        line-height: 34px;
+        margin: 5.0rem 0 3.2rem;
+        height: 7.0rem;
+        font-size: 4.8rem;
+        line-height: 3.4rem;
         color: #FFFFFF;
     }
 
     header p {
         display: inherit;
 
-        font-family: var(--ff-aside);
-        font-size: 24px;
-        line-height: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.4rem;
+        line-height: 2.0rem;
 
-        width: 275px;
-        height: 262px;
-        left: 54px;
-        top: 333px;
+        width: 27.5rem;
+        height: 26.2rem;
+        left: 5.4rem;
+        top: 33.3rem;
 
         color: #FFFFFF;
 
@@ -297,9 +290,9 @@ footer {
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 446px;
-        margin: 64px 0;
-        gap: 36px;
+        height: 44.6rem;
+        margin: 6.4rem 0;
+        gap: 3.6rem;
         
     }
 
@@ -322,7 +315,7 @@ footer {
     .card-desk { 
         display: flex;
         flex-direction: column;
-        gap: 36px;   
+        gap: 3.6rem;   
     }
    
     .card {
@@ -333,18 +326,28 @@ footer {
         display: none;
     }
 
-    footer {
+    footer {     
        grid-area: f;
-       /*background-color: aqua;*/
+       /* background-color: aqua; */
        opacity: 1;
        display: inherit;
-      
     }
 
     footer p {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+    }
+
+    footer p span{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 2.8rem; 
     }
 
     body {
@@ -355,13 +358,16 @@ footer {
                              "h f"
                              "h f";
     }
-
 }
 
-
 @media (min-width: 1146px) {
-
     .main-page div:nth-child(3) {
         display: inherit;
+    }
+}
+
+@media (max-height: 890px) {
+    footer {
+        display: none;
     }
 }
