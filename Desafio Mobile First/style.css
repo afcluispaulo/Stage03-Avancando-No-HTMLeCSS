@@ -158,6 +158,10 @@ body main p {
 
 }
 
+.card h2 span {
+    text-transform: uppercase;
+}
+
 .main-page {
     display: none;
 }
