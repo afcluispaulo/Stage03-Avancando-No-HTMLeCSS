@@ -90,7 +90,7 @@ header h1 {
 
     font-family: var(--ff-header-button);
     font-size: 4.0rem;
-    line-height: 3.4rem;
+    height: 26.2rem;
     letter-spacing: 5%;
     
     color: var(--fc-ff-header);
@@ -111,10 +111,13 @@ body main  {
 body main p {
     margin: var(--m-p-top) 0 var(--m-p-bottom);
     text-align: center;
-
+   
     font-family: var(--ff-aside);
-    Size: 2.0rem;
-    Line-height: 1.5rem;
+
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+
+    
 }
 
 .card {
