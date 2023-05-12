@@ -16,7 +16,8 @@
 </ul>
 
 # Vídeo demonstrando a tela Mobile:
-<video src="./assets/Vídeos Desafio Mobile First/Mobile First.mp4 "></video>
+https://github.com/afcluispaulo/Stage03-Avancando-No-HTMLeCSS/assets/102933945/d851de15-3606-41a1-a546-ca3746450e8c
 
 # Vídeo demonstrando a tela Desktop:
-<video src="./assets/Vídeos Desafio Mobile First/Mobile First versão Desktop.mp4 "></video>
+https://github.com/afcluispaulo/Stage03-Avancando-No-HTMLeCSS/assets/102933945/88c53f4f-6620-49c4-85bd-9cef47d73f00
+
