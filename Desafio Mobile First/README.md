@@ -13,6 +13,7 @@
     <li>CSS animations</li>
     <li>Position Relative</li>
     <li>Position Absolute</li>
+    <li>Media Queries</li>
 </ul>
 
 ## Vídeo demonstrando a tela Mobile:
