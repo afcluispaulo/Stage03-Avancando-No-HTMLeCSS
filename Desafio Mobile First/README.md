@@ -1,4 +1,4 @@
-# Desafio Stage 03 - Avançando no HTML e no CSS
+# Desafio Stage 03 - Avançando no HTML e no CSS - Projeto Mobile First
 ## Tecnologias usadas:
 <ul> 
     <li>HTML</li>
