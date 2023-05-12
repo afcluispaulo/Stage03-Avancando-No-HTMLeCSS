@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    font-size: 62.5%; /* 10px */
+
+    /* page */
+    --page-width: 38.4rem;
+
+    /* header */
+    --fc-bg-header: #8E9AAF;
+    --fc-header-padding: #CBC0D3;
+    --fc-ff-header: #FFFFFF;
+
+    --ff-header-button: 'Staatliches', sans-serif;
+
+    --m-img: 3.2rem;
+
+    --h-header-padding: 4.9rem;
+    --m-header-padding: 2.9rem;
+    --m-header-bottom: 2.9rem;
+
+    /* aside */
+    --fc-bg-aside: #EFF1FF;
+    --fc-button-aside: #4A4E69;
+
+    --ff-aside: 'Palanquin', sans-serif;
+
+    --m-p-top: 1.4rem; 
+    --m-p-bottom: 6.3rem;
+    --gap-img: 3.2rem;
+    
+    /* button */
+
+    --fc-bg-button: #E5E5E5;
+    --w-button: 11.2rem;
+    --h-button: 3.5rem;
+    --p-button: 2.0rem;
+    --br-button: 2.0rem;
+
+    --fs-button: 2.0rem;
+    --ln-button: 3.4rem;
+
+    --top-right-button: 1.6rem;
+
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fc-bg-aside);   
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 27.9rem;
+    background-color: var(--fc-bg-header);
+    position: relative;
+    
+}
+
+header img {
+    margin: var(--m-img) 0 var(--gap-img);
+}
+
+.desk {
+    visibility: hidden;
+    position: absolute;
+}
+
+header h1 {  
+    width: 100%;
+    height: var(--h-header-padding);
+    margin-bottom: 2.9rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--fc-header-padding);
+
+    font-family: var(--ff-header-button);
+    font-size: 4.0rem;
+    height: 26.2rem;
+    letter-spacing: 5%;
+    
+    color: var(--fc-ff-header);
+}
+
+header p { 
+    display: none;
+}
+
+body main  {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 3.2rem 6.0rem;
+
+}
+
+body main p {
+    margin: var(--m-p-top) 0 var(--m-p-bottom);
+    text-align: center;
+   
+    font-family: var(--ff-aside);
+
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+
+    
+}
+
+.card {
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    margin-bottom: var(--m-img);
+}
+
+.card span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    width: var(--w-button);
+    height: var(--h-button);
+    
+
+    background-color: var(--fc-bg-button);
+    
+    border-radius: var(--br-button);
+}
+
+.card h2 {
+    position: absolute;
+    z-index: 1;
+    top: 1.7rem;
+    right: 3.9rem;
+    font-family: var(--ff-header-button);
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    /* identical to box height, or 170% */
+
+    letter-spacing: 0.05em;
+    color: var(--fc-button-aside);
+
+}
+
+.card h2 span {
+    text-transform: uppercase;
+}
+
+.main-page {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    opacity: 0;
+}
+
+@keyframes downtop {
+    100% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+}
+
+@keyframes side {
+    0% {
+        opacity: 0;
+        transform: translate(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        animation: topdown 700ms;
+    }
+
+    header h1 {
+        animation: side 700ms 500ms reverse backwards;
+    }
+
+    main {
+        animation: downtop 700ms 300ms reverse backwards;
+    }
+
+    .card h2 span {
+        animation: topdown 4s 300ms backwards;
+    }
+}
+
+@media (min-width: 720px) {
+    header {
+        grid-area: h;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #8E9AAF;
+        position: relative;
+    }
+
+    .mobile {
+        visibility: inherit;
+    }
+
+    .desk {
+        visibility: inherit;
+        position: absolute;
+    }
+    
+
+    header img {
+        transition: transform 200ms;
+        object-fit: cover;
+      
+    }
+
+    header img:hover {
+        transform: scale(1.1);
+        transition-property: transform;
+        transition-duration: 200ms;
+        /* transition-timing-function: ease; */
+    }
+
+
+    header h1 {
+        margin: 5.0rem 0 3.2rem;
+        height: 7.0rem;
+        font-size: 4.8rem;
+        line-height: 3.4rem;
+        color: #FFFFFF;
+    }
+
+    header p {
+        display: inherit;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.4rem;
+        line-height: 2.0rem;
+
+        width: 27.5rem;
+        
+        left: 5.4rem;
+        top: 33.3rem;
+
+        color: #FFFFFF;
+
+        text-align: center;
+    }
+
+    main { 
+        grid-area: m;
+        background: #FFFFFF;
+        
+        display: flex;
+        flex-direction: column;
+     }
+
+    .main-page{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 44.6rem;
+        margin: 6.4rem 0;
+        gap: 3.6rem;
+        
+    }
+
+    .main-page img {
+        transition: transform 200ms;
+        object-fit: cover;
+    }
+
+    .main-page div:nth-child(3) {
+        display: none;
+    }
+
+    .main-page img:hover {
+        transform: scale(1.1);
+        transition-property: transform;
+        transition-duration: 200ms;
+        /* transition-timing-function: ease; */
+    }
+
+    .card-desk { 
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;   
+    }
+   
+    .card {
+        display: none;
+    }
+
+    main p {
+        display: none;
+    }
+
+    footer {     
+       grid-area: f;
+       /* background-color: aqua; */
+       opacity: 1;
+       display: inherit;
+    }
+
+    footer p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+    }
+
+    footer p span{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 2.8rem; 
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr;
+        grid-template-rows: 80vh 5vh 15vh;
+        grid-template-areas: "h m"
+                             "h f"
+                             "h f";
+    }
+}
+
+@media (min-width: 1146px) {
+    .main-page div:nth-child(3) {
+        display: inherit;
+    }
+}
+
+@media (max-height: 890px) {
+    footer {
+        display: none;
+    }
+}
